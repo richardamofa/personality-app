@@ -1,0 +1,488 @@
+.landing {
+  min-height: 100vh;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4rem 1.5rem;
+
+  overflow: hidden;
+
+  background: #f8f7f2;
+  color: #111;
+}
+
+
+.landing::before,
+.landing::after {
+  content: "";
+  position: absolute;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.landing::before {
+  width: 180px;
+  height: 180px;
+
+  top: 8%;
+  left: 7%;
+
+  background: #c8ff00;
+
+  border: 4px solid #111;
+
+  transform: rotate(-12deg);
+
+  box-shadow: 8px 8px 0 #111;
+}
+
+.landing::after {
+  width: 120px;
+  height: 120px;
+
+  right: 8%;
+  bottom: 10%;
+
+  background: #ff4fd8;
+
+  border: 4px solid #111;
+  border-radius: 50%;
+
+  box-shadow: 8px 8px 0 #111;
+}
+
+.landing-content {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 900px;
+
+  text-align: center;
+}
+
+
+.landing-hero {
+  margin-bottom: 3.5rem;
+}
+
+
+/* Eyebrow */
+
+.landing-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.75rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.landing-eyebrow span {
+  padding: 0.45rem 0.7rem;
+
+  border: 3px solid #111;
+
+  background: #fff;
+
+  box-shadow: 3px 3px 0 #111;
+
+  font-size: 0.7rem;
+  font-weight: 950;
+
+  letter-spacing: 0.08em;
+}
+
+.landing-eyebrow span:last-child {
+  background: #c8ff00;
+}
+
+
+/* Heading */
+
+.landing-hero h1 {
+  max-width: 850px;
+
+  margin: 0 auto 1.25rem;
+
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 950;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.07em;
+
+  text-transform: uppercase;
+
+  text-shadow: 5px 5px 0 #c8ff00;
+}
+
+
+/* Heading highlighted word */
+
+.landing-hero h1 span {
+  display: inline-block;
+
+  padding: 0 0.12em;
+
+  background: #ff4fd8;
+
+  border: 3px solid #111;
+
+  transform: rotate(-2deg);
+
+  text-shadow: none;
+}
+
+
+/* Description */
+
+.landing-hero p {
+  max-width: 620px;
+
+  margin: 0 auto 2rem;
+
+  font-size: clamp(1rem, 2vw, 1.2rem);
+
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  color: #333;
+}
+
+.landing-hero p strong {
+  font-weight: 950;
+  color: #111;
+}
+
+.landing-cta {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.4rem;
+
+  min-height: 58px;
+
+  padding: 0.9rem 1.6rem;
+
+  border: 4px solid #111;
+  border-radius: 6px;
+
+  background: #7c3aed;
+  color: #fff;
+
+  font-size: 1rem;
+  font-weight: 950;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  box-shadow: 7px 7px 0 #111;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.landing-cta span {
+  font-size: 1.3rem;
+
+  transition: transform 0.15s ease;
+}
+
+.landing-cta:hover {
+  background: #ff4fd8;
+  color: #111;
+
+  transform: translate(4px, 4px);
+
+  box-shadow: 3px 3px 0 #111;
+}
+
+.landing-cta:hover span {
+  transform: translateX(5px);
+}
+
+.landing-cta:active {
+  transform: translate(7px, 7px);
+
+  box-shadow: 0 0 0 #111;
+}
+
+
+.personality-previews {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1.25rem;
+
+  margin: 4rem 0 2rem;
+}
+
+
+.preview-card {
+  position: relative;
+
+  min-height: 180px;
+
+  padding: 1.5rem;
+
+  border: 4px solid #111;
+  border-radius: 8px;
+
+  text-align: left;
+
+  box-shadow: 8px 8px 0 #111;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.preview-card:hover {
+  transform: translate(-4px, -6px) rotate(-1deg);
+
+  box-shadow: 12px 12px 0 #111;
+}
+
+
+/* Card number */
+
+.preview-number {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  margin-bottom: 1.25rem;
+
+  border: 3px solid #111;
+
+  background: #fff;
+
+  font-size: 0.75rem;
+  font-weight: 950;
+
+  box-shadow: 3px 3px 0 #111;
+}
+
+
+/* Card heading */
+
+.preview-card h3 {
+  margin-bottom: 0.75rem;
+
+  font-size: 1.15rem;
+
+  font-weight: 950;
+
+  line-height: 1.05;
+
+  text-transform: uppercase;
+
+  letter-spacing: -0.02em;
+}
+
+
+/* Card description */
+
+.preview-card p {
+  margin: 0;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  line-height: 1.45;
+
+  color: #222;
+}
+
+
+.preview-card-0 {
+  background: #c8ff00;
+
+  transform: rotate(-2deg);
+}
+
+.preview-card-1 {
+  background: #ff4fd8;
+
+  transform: rotate(1.5deg);
+}
+
+.preview-card-2 {
+  background: #ffd43b;
+
+  transform: rotate(-1deg);
+}
+
+.preview-card::after {
+  content: "✦";
+
+  position: absolute;
+
+  top: -18px;
+  right: -14px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 3px solid #111;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  font-size: 1.2rem;
+
+  font-weight: 900;
+
+  box-shadow: 3px 3px 0 #111;
+}
+
+
+.landing-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 0.6rem;
+
+  margin-top: 2rem;
+
+  font-size: 0.7rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+}
+
+.landing-footer span:nth-child(even) {
+  color: #7c3aed;
+}
+
+
+@media (max-width: 800px) {
+  .landing {
+    padding: 3rem 1.25rem;
+  }
+
+  .landing::before {
+    width: 100px;
+    height: 100px;
+
+    top: 4%;
+    left: -25px;
+  }
+
+  .landing::after {
+    width: 80px;
+    height: 80px;
+
+    right: -20px;
+    bottom: 5%;
+  }
+
+  .landing-hero {
+    margin-bottom: 2.5rem;
+  }
+
+  .landing-hero h1 {
+    font-size: clamp(2.8rem, 14vw, 5rem);
+
+    text-shadow: 4px 4px 0 #c8ff00;
+  }
+
+  .landing-hero p {
+    font-size: 1rem;
+  }
+
+  .personality-previews {
+    grid-template-columns: 1fr;
+
+    gap: 1.25rem;
+
+    margin-top: 3rem;
+  }
+
+  .preview-card {
+    min-height: auto;
+  }
+
+  .preview-card-0,
+  .preview-card-1,
+  .preview-card-2 {
+    transform: none;
+  }
+
+  .preview-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 9px 9px 0 #111;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing {
+    padding: 2.5rem 1rem;
+  }
+
+  .landing-eyebrow {
+    gap: 0.5rem;
+  }
+
+  .landing-eyebrow span {
+    font-size: 0.6rem;
+  }
+
+  .landing-hero h1 {
+    font-size: 3rem;
+  }
+
+  .landing-hero p {
+    font-size: 0.95rem;
+  }
+
+  .landing-cta {
+    width: 100%;
+  }
+
+  .preview-card {
+    padding: 1.25rem;
+  }
+
+  .landing-footer {
+    font-size: 0.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preview-card,
+  .landing-cta,
+  .landing-cta span {
+    transition: none;
+  }
+}
